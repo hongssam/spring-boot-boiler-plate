@@ -1,0 +1,8 @@
+[submodule "src/main/java/com/spring-boot-core"]
+	path = src/main/java/com/spring-boot-core
+	url = git@github.com:hongssam/spring-boot-core.git
+	branch = develop
+[submodule "src/main/resources/spring-boot-config"]
+	path = src/main/resources/spring-boot-config
+	url = git@github.com:hongssam/spring-boot-config.git
+    branch = develop
