@@ -3,8 +3,8 @@
 ## TODO
  - [X] h2
  - [X] jpa
- - [ ] submodule-core
- - [ ] submodule-config
+ - [X] submodule-core
+ - [X] submodule-config
  - [ ] ApiResponse 
  - [ ] error handling
  - [ ] swagger 

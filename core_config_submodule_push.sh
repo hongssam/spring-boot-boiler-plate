@@ -2,7 +2,7 @@
 
 message=$1
 
-cd src/main/resources/spring-boot-config && git add -A && git commit -m "$message"
+cd src/main/resources/spring_boot_config && git add -A && git commit -m "$message"
 
 branch=$(git branch --show-current)
 
