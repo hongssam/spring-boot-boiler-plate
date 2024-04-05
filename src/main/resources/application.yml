@@ -27,5 +27,18 @@ spring:
         format_sql: true
         show_sql: true
 
+  messages:
+    basename: spring_boot_config/messages/messages
+    encoding: UTF-8
+    #메세지 코들르 찾지 못했을때
+    # true → 코드 값 그대로 반환
+    # false → exception 발생
+    use-code-as-default-message: false
+    # true → 시스템 설정 (MessageConfig)에서 설정한 언어에 맞는 message 파일 활용
+    # false → default 파일 (message.properties) 활용
+    fallback-to-system-locale: false
+    # 캐시 주기 설정 (default forever)
+    cache-duration: 3600
+
 logging.level:
   org.hibernate.SQL: debug
