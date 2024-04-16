@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration packagingData="true" scan="true" scanPeriod="60 seconds">
+
+    <springProperty scope="context" name="LOG_LEVEL" source="logging.level.info"/>
+
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="com.spring_boot_core.filters.LogbackFilter"/>
+        <encoder>
+            <pattern>%boldBlue(%d{yyyy-MM-dd HH:mm:ss.SSS}) %cyan([=%thread=]) %magenta([txId=%X{traceId}]) %highlight(%-5level) %logger{36}.%M
+                - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <logger appender-ref="CONSOLE" level="ERROR" name="com.amazonaws.util.EC2MetadataUtils"/>
+    <logger appender-ref="CONSOLE" level="ERROR" name="com.amazonaws.SdkClientException"/>
+
+    <logger appender-ref="CONSOLE" level="WARN" name="org.apache"/>
+    <logger appender-ref="CONSOLE" level="WARN" name="httpclient"/>
+    <logger appender-ref="CONSOLE" level="INFO" name="org.springframework.orm.jpa.JpaTransactionManager"/>
+    <logger appender-ref="CONSOLE" level="INFO" name="com.amazonaws"/>
+    <logger appender-ref="CONSOLE" level="WARN" name="org.hibernate"/> <!-- 쿼리 이상 있을 경우에만 노출 -->
+    <logger appender-ref="CONSOLE" level="INFO" name="software.amazon"/>
+    <logger appender-ref="CONSOLE" level="INFO" name="com.zaxxer.hikari"/>
+    <logger appender-ref="CONSOLE" level="INFO" name="org.springframework"/>
+    <logger appender-ref="CONSOLE" level="INFO" name="io.netty"/>
+    <logger appender-ref="CONSOLE" level="INFO" name="io.lettuce"/>
+    <logger name="org.quartz.core.QuartzSchedulerThread" level="OFF" />
+
+</configuration>

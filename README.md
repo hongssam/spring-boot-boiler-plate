@@ -5,10 +5,13 @@
  - [X] jpa
  - [X] submodule-core
  - [X] submodule-config
- - [ ] ApiResponse 
- - [ ] error handling
- - [ ] swagger 
- - [ ] logging
+   - [ ] config setting
+ - [X] ApiResponse 
+ - [X] error handling
+   - [ ] segmentation
+ - [X] i18n
+ - [X] swagger 
+ - [X] logging
  - [ ] feign client
  - [ ] jwt 
  - [ ] security

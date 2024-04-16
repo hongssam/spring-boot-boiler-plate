@@ -39,6 +39,12 @@ spring:
     fallback-to-system-locale: false
     # 캐시 주기 설정 (default forever)
     cache-duration: 3600
+#
+#logging.level:
+#  org.hibernate.SQL: debug
 
-logging.level:
-  org.hibernate.SQL: debug
+# p6spy 설정
+decorator.datasource.p6spy:
+  enable-logging: false
+  multiline: true
+  logging: slf4j
